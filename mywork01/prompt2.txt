@@ -1,0 +1,22 @@
+
+
+```tex
+
+In lecture, we saw how to construct a brittle comparison gadget. If the inequality was strict, the comparator was correct, but had undefined behavior when the two values were equal. Show that there does not exist a comparison gadget that is not brittle. In other words, there is no game such that:
+
+\begin{enumerate}[(a)]
+    \item There are three players, a, b, c each with two strategies, 0 and 1.
+    \item  In any Nash Equilibrium, if \(Pr[a~plays~1] \ge Pr[b~plays~1]\), then \(Pr[c~plays~1] = 1\).
+    \item In any Nash Equilibrium, if \(Pr[a~plays~1] < Pr[b~plays~1]\), then \(Pr[c~plays~1] = 0\).
+\end{enumerate}
+
+\textit{Hint: Assume that such a game exists. Use this comparator as a gadget to construct a game with no Nash equilbrium, yielding a contradiction}
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

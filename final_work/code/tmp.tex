@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cite}
+
+\begin{document}
+
+\section{Core Ideas: Overview of EFX Allocation Algorithm}
+
+In this section, we provide a formal and academic overview of the main ideas used to find our EFX (Envy-Free up to any number of goods) allocation. We begin by presenting the algorithm of Lipton et al. \cite{10.1145/988772.988792}, which is utilized to find an EF1 (Envy-Free with one good) allocation. Our approach extends this algorithm to achieve an EFX allocation, ensuring that no agent envies others even when multiple goods are involved.
+
+\subsection{Algorithm for EF1 Allocation}
+
+Lipton et al.'s algorithm \cite{10.1145/988772.988792} centers around the notion of an envy-graph, where each vertex represents an agent, and an edge $(i, j)$ exists if agent $i$ envies agent $j$. A crucial property of the envy-graph is that it forms a Directed Acyclic Graph (DAG). The absence of cycles in the envy-graph implies that no agent's envy can lead to a "chain reaction" of envy among other agents.
+
+To ensure an EF1 allocation, the algorithm operates in rounds. At the beginning of each round, the envy-graph is checked for cycles. If a cycle is found, bundles are exchanged among the agents within the cycle to increase their individual valuations. This exchange eliminates cycles, and the process is repeated until no cycles remain in the envy-graph.
+
+\subsection{Extension to EFX Allocation}
+
+Our goal is to extend the algorithm to achieve an EFX allocation, where envy is eliminated not just for single goods, but for any number of goods. To maintain the EF1 property while incorporating multiple goods, we perform an allocation in each round, ensuring that the allocation remains EF1.
+
+During each round, we identify an unenvied agent $s$, who becomes a source vertex in the envy-graph. We then allocate an unallocated good $g$ to agent $s$. As no other agent envies $s$ due to the unallocated good $g$, the new allocation remains EF1.
+
+By repeating this process, we create an EFX allocation in which no agent envies others, regardless of the number of goods involved. This is achieved by systematically identifying unenvied agents and allocating unallocated goods to them, maintaining the EF1 property throughout the process.
+
+\section{Conclusion}
+
+In conclusion, we have presented a formal overview of the main ideas behind our EFX allocation algorithm, building upon the EF1 algorithm proposed by Lipton et al. \cite{10.1145/988772.988792}. By extending their approach to handle multiple goods, we achieve an EFX allocation, eliminating envy among agents for any number of goods. Our algorithm's effectiveness lies in its ability to identify unenvied agents and allocate goods to maintain the EF1 property, leading to a fair and envy-free allocation.
+
+\bibliographystyle{plain}
+\bibliography{references} % Replace 'references' with your bibliography file
+
+\end{document}

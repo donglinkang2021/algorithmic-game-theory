@@ -1,0 +1,115 @@
+@misc{garg2023approximating,
+      title={Approximating Nash Social Welfare by Matching and Local Search}, 
+      author={Jugal Garg and Edin Husić and Wenzheng Li and László A. Végh and Jan Vondrák},
+      year={2023},
+      eprint={2211.03883},
+      archivePrefix={arXiv},
+      primaryClass={cs.GT}
+}
+
+@misc{chaudhury2020little,
+      title={A Little Charity Guarantees Almost Envy-Freeness}, 
+      author={Bhaskar Ray Chaudhury and Tellikepalli Kavitha and Kurt Mehlhorn and Alkmini Sgouritsa},
+      year={2020},
+      eprint={1907.04596},
+      archivePrefix={arXiv},
+      primaryClass={cs.GT}
+}
+
+@article{doi:10.1137/20M1359134,
+author = {Chaudhury, Bhaskar Ray and Kavitha, Telikepalli and Mehlhorn, Kurt and Sgouritsa, Alkmini},
+title = {A Little Charity Guarantees Almost Envy-Freeness},
+journal = {SIAM Journal on Computing},
+volume = {50},
+number = {4},
+pages = {1336-1358},
+year = {2021},
+doi = {10.1137/20M1359134},
+
+URL = { 
+    
+        https://doi.org/10.1137/20M1359134
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/20M1359134
+    
+    
+
+}
+,
+    abstract = { The fair division of indivisible goods is a very well-studied problem. The goal of this problem is to distribute \$m\$ goods to \$n\$ agents in a “fair” manner, where every agent has a valuation for each subset of goods. We assume monotone valuations. Envy-freeness is the most extensively studied notion of fairness. However, envy-free allocations do not always exist when goods are indivisible. The notion of fairness we consider here is “envy-freeness up to any good,” EFX, where no agent envies another agent after the removal of any single good from the other agent's bundle. It is not known if such an allocation always exists. We show there is always a partition of the set of goods into \$n+1\$ subsets \$(X\_1,\ldots,X\_n,P)\$, where for \$i \in [n]\$, \$X\_i\$ is the bundle allocated to agent \$i\$ and the set \$P\$ is unallocated (or donated to charity) such that we have (1) envy-freeness up to any good, (2) no agent values \$P\$ higher than her own bundle, and (3) fewer than \$n\$ goods go to charity, i.e., \$|P| < n\$ (typically \$m \gg n\$). Our proof is constructive and leads to a pseudopolynomial time algorithm to find such an allocation. When agents have additive valuations and \$|{P}|\$ is large (i.e., when \$|P|\$ is close to \$n\$), our allocation also has a good maximin share (MMS) guarantee. Moreover, a minor variant of our algorithm also shows the existence of an allocation that is 4/7 groupwise maximin share (GMMS): this is a notion of fairness stronger than MMS. This improves upon the current best bound of 1/2 known for an approximate GMMS allocation. (Very recently and independently, Amanatidis, Ntokos, and Markakis [Theoret. Comput. Sci., 841 (2020), pp. 94--109], also showed the existence of a 4/7-GMMS allocation.) }
+}
+
+@article{DBLP:journals/corr/PlautR17,
+  author       = {Benjamin Plaut and
+                  Tim Roughgarden},
+  title        = {Almost Envy-Freeness with General Valuations},
+  journal      = {CoRR},
+  volume       = {abs/1707.04769},
+  year         = {2017},
+  url          = {http://arxiv.org/abs/1707.04769},
+  eprinttype    = {arXiv},
+  eprint       = {1707.04769},
+  timestamp    = {Mon, 13 Aug 2018 16:47:24 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/PlautR17.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{10.1145/988772.988792,
+author = {Lipton, R. J. and Markakis, E. and Mossel, E. and Saberi, A.},
+title = {On Approximately Fair Allocations of Indivisible Goods},
+year = {2004},
+isbn = {1581137710},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/988772.988792},
+doi = {10.1145/988772.988792},
+abstract = {We study the problem of fairly allocating a set of indivisible goods to a set of people from an algorithmic perspective. fair division has been a central topic in the economic literature and several concepts of fairness have been suggested. The criterion that we focus on is envy-freeness. In our model, a monotone utility function is associated with every player specifying the value of each subset of the goods for the player. An allocation is envy-free if every player prefers her own share than the share of any other player. When the goods are divisible, envy-free allocations always exist. In the presence of indivisibilities, we show that there exist allocations in which the envy is bounded by the maximum marginal utility, and present a simple algorithm for computing such allocations. We then look at the optimization problem of finding an allocation with minimum possible envy. In the general case the problem is not solvable or approximable in polynomial time unless P = NP. We consider natural special cases (e.g.additive utilities) which are closely related to a class of job scheduling problems. Approximation algorithms as well as inapproximability results are obtained. Finally we investigate the problem of designing truthful mechanisms for producing allocations with bounded envy.},
+booktitle = {Proceedings of the 5th ACM Conference on Electronic Commerce},
+pages = {125–131},
+numpages = {7},
+keywords = {fairness, truthfulness, approximation algorithm, envy},
+location = {New York, NY, USA},
+series = {EC '04}
+}
+
+@article{10.1145/3355902,
+author = {Caragiannis, Ioannis and Kurokawa, David and Moulin, Herv\'{e} and Procaccia, Ariel D. and Shah, Nisarg and Wang, Junxing},
+title = {The Unreasonable Fairness of Maximum Nash Welfare},
+year = {2019},
+issue_date = {August 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {3},
+issn = {2167-8375},
+url = {https://doi.org/10.1145/3355902},
+doi = {10.1145/3355902},
+abstract = {The maximum Nash welfare (MNW) solution—which selects an allocation that maximizes the product of utilities—is known to provide outstanding fairness guarantees when allocating divisible goods. And while it seems to lose its luster when applied to indivisible goods, we show that, in fact, the MNW solution is strikingly fair even in that setting. In particular, we prove that it selects allocations that are envy-free up to one good—a compelling notion that is quite elusive when coupled with economic efficiency. We also establish that the MNW solution provides a good approximation to another popular (yet possibly infeasible) fairness property, the maximin share guarantee, in theory and—even more so—in practice. While finding the MNW solution is computationally hard, we develop a nontrivial implementation and demonstrate that it scales well on real data. These results establish MNW as a compelling solution for allocating indivisible goods and underlie its deployment on a popular fair-division website.},
+journal = {ACM Trans. Econ. Comput.},
+month = {sep},
+articleno = {12},
+numpages = {32},
+keywords = {Fair division, Nash welfare, resource allocation}
+}
+
+@article{DBLP:journals/corr/abs-1902-04319,
+  author       = {Ioannis Caragiannis and
+                  Nick Gravin and
+                  Xin Huang},
+  title        = {Envy-freeness up to any item with high Nash welfare: The virtue of
+                  donating items},
+  journal      = {CoRR},
+  volume       = {abs/1902.04319},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1902.04319},
+  eprinttype    = {arXiv},
+  eprint       = {1902.04319},
+  timestamp    = {Tue, 21 May 2019 18:03:40 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1902-04319.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}

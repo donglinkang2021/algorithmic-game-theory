@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Fair Division of Indivisible Goods with Envy-Freeness up to Any Good}
+\author{Undergraduate Student}
+\date{}
+
+\maketitle
+
+\section*{Abstract}
+
+Fair division of indivisible goods is a well-studied problem in which the objective is to distribute $m$ goods to $n$ agents in a manner that is considered "fair." Each agent has a valuation for every subset of goods, and the challenge arises due to the indivisibility of the goods.
+
+Envy-freeness is a widely explored concept of fairness, but it does not always exist in the context of indivisible goods. An alternative notion of fairness that we consider is "envy-freeness up to any good" (EFX). Under EFX, no agent envies another agent after any single good is removed from the latter's bundle. The existence of such an allocation is currently unknown.
+
+This study demonstrates the existence of a partition of the goods into $n+1$ subsets, denoted as $(X_1, \ldots, X_n, P)$, where $X_i$ represents the bundle allocated to agent $i$, and the set $P$ remains unallocated or is donated to charity. The proposed allocation satisfies the following conditions:
+
+\begin{enumerate}
+    \item Envy-freeness up to any good,
+    \item No agent values $P$ higher than their own bundle, and
+    \item The number of goods allocated to charity is fewer than $n$, i.e., $|P| < n$ (typically $m \geq n$).
+\end{enumerate}
+
+The proof presented in this study is constructive and leads to a pseudo-polynomial time algorithm to find such an allocation. This algorithm extends its applicability to cases where agents have general valuation functions, not limited to just gross-substitute valuations. Furthermore, when $|P|$ is large, i.e., close to $n$, the proposed allocation also guarantees a good maximin share (MMS). Additionally, a minor variant of the algorithm establishes the existence of an allocation that achieves at least a $\frac{4}{7}$ groupwise maximin share (GMMS), which is a stronger notion of fairness than MMS. This improvement supersedes the current best approximate GMMS allocation bound of $\frac{1}{2}$.
+
+The findings in this paper go beyond the preliminary version published in SODA 2020~\cite{doi:10.1137/20M1359134}, and two key contributions are highlighted:
+
+\begin{enumerate}
+    \item The pseudo-polynomial algorithm accommodates agents with general valuation functions.
+    \item A relaxed definition of the "most envious agent" is introduced, which adds to the practicality and applicability of the proposed allocation.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+    \bibitem{doi:10.1137/20M1359134}
+    [Author Names],
+    \emph{Title of the Preliminary Version},
+    SODA 2020, [Pages],
+    DOI: [DOI Number].
+\end{thebibliography}
+
+\end{document}

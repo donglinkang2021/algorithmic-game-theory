@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{enumerate}
+\begin{document}
+\begin{abstract}
+    In this paper, we address the problem of fair division of indivisible goods among multiple agents with general valuations. Envy-freeness, a widely studied notion of fairness, is not always achievable in this context. Instead, we consider a weaker notion called "envy-freeness up to any good" (EFX), where no agent envies another after the removal of any single good from the other agent's bundle.
+    
+    Our main result establishes the existence of an allocation satisfying EFX along with two additional desirable properties. Specifically, we demonstrate the existence of a partition of goods into $n + 1$ subsets $(X_1, \ldots, X_n, P)$, where each $X_i$ represents the bundle allocated to agent $i$, and the set $P$ remains unallocated (or donated to charity). The allocation possesses the following characteristics:
+    \begin{itemize}
+        \item Envy-freeness up to any good,
+        \item No agent values $P$ higher than her own bundle, and
+        \item The number of goods going to charity is strictly less than $n$, i.e., $|P| < n$ (with $m \geq n$ typically).
+    \end{itemize}
+    
+    Our constructive proof leads to a pseudo-polynomial time algorithm for finding such an allocation. Notably, when agents have additive valuations and $|P|$ is large (close to $n$), our allocation guarantees a good maximin share (MMS). Moreover, a minor variation of our algorithm yields an allocation that achieves a $\frac{4}{7}$ groupwise maximin share (GMMS), a stronger notion of fairness compared to MMS. This result significantly improves upon the existing best bound of $\frac{1}{2}$ for an approximate GMMS allocation.
+    
+    This version of the paper extends beyond the preliminary version published in SODA 2020 [1] in two key aspects:
+    \begin{enumerate}
+        \item The pseudo-polynomial algorithm remains effective even when agents have general valuation functions (not restricted to gross-substitute valuations).
+        \item We introduce a relaxed definition of the "most envious agent," contributing to a better understanding of the problem.
+    \end{enumerate}
+    \end{abstract}
+    
+\end{document}

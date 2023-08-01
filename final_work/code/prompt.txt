@@ -1,0 +1,23 @@
+
+
+```tex
+
+We now highlight a key difference between an EF1 allocation and an EFX allocation. From the algorithm of Lipton et al.~\cite{10.1145/988772.988792}, it is clear that given an EF1 allocation on a set $M_0$ of goods, one can determine an EF1 allocation on $M_0 \cup M_1$, for any $M_1 \subseteq M \setminus M_0$, by simply adding goods from $M_1$ one-by-one to the existing bundles and changing the owners (if necessary) in a clever way. Intuitively, we never need to cut or merge the bundles formed in any EF1 allocation. We can just append the unallocated goods appropriately to the current bundles.
+
+```
+
+Please polish the contents to meet the following requirements:
+
+- Style: The content should be written in a formal and academic style, it's easy to understand.
+- Grammar: The content should be grammatically correct.
+- Structure: The content should be well-structured and easy to read.
+- Format: The content should be written in LaTeX format.
+- Content Type: Core Ideas.
+- Author Type: Undergraduate student. 
+
+Put your answer in the following block:
+
+```tex
+<answer>
+```
+

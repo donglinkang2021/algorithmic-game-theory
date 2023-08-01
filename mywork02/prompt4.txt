@@ -1,0 +1,17 @@
+
+
+```tex
+
+\paragraph{Problem 4.}(5pt) Given a valuation function v : $2^{[m]} \rightarrow \mathbb{R}$ which is normalized (i.e., $v(\emptyset) = 0$) and
+monotone (i.e., $v(S) \le v(T)$ once $S \subseteq T \subseteq [m]$). v is additive iff v(S) = $\sum_{i \in S} v(i)$ for any $S \subseteq [m]$. v is submodular iff $v(S \cup T) + v(S \cap T) \le v(S) + v(T)$ for any $S, T \subseteq [m]$. And $v$ is XOS iff there exist t additive valuations $\{a_1, . . . , a_t\}$ such that $v(S) = max_{r \in [t]} a_r(S)$ for every $S \subseteq [m]$.
+
+Prove that any monotone and normalized submodular function can be written as an XOS function
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

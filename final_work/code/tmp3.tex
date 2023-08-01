@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+
+\begin{document}
+
+\section{Introduction}
+
+An allocation refers to the partitioning of a set $M$ into disjoint subsets $X_1, \ldots, X_n$, where each subset $X_i$ represents the goods assigned to agent $i$. The concept of fairness in allocation is a fundamental concern in various domains, and one of the well-studied notions of fairness is Envy-freeness. In the context of allocation, Envy-freeness implies that no agent envies another, where envy is defined as an agent valuing the goods assigned to another agent more than their own.
+
+Formally, let there be $n$ agents denoted by $i$ and a set of goods $M$. Each agent $i$ has a value function that assigns a value to each subset of goods, denoted as $X_i \subseteq M$. An allocation is considered envy-free if for all agents $i$ and $j$ in the set of agents $\{1, 2, \ldots, n\}$, the following condition holds:
+
+\[ \forall i, j \in \{1, 2, \ldots, n\}: \quad i \neq j \Rightarrow \text{value}(X_i) \leq \text{value}(X_j) \]
+
+In other words, for any two agents $i$ and $j$, the value assigned by agent $i$ to their allocated subset $X_i$ is less than or equal to the value assigned by agent $j$ to their allocated subset $X_j$. If this condition is satisfied for all agents, the allocation is deemed envy-free.
+
+The notion of envy-free allocation is widely regarded as fair and desirable, as it ensures that no agent feels disadvantaged or covets the allocation of another. The concept of allocating resources without causing envy dates back to ancient times and has been mentioned in various contexts, including historical references such as the Bible \cite{DBLP:journals/corr/PlautR17}.
+
+In this work, we explore the notion of Envy-freeness and its significance as a fair mechanism for partitioning resources among multiple agents. We delve into its implications, computational aspects, and potential applications in various real-world scenarios.
+
+\end{document}

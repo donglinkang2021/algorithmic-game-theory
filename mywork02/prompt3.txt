@@ -1,0 +1,17 @@
+
+
+```tex
+
+\begin{enumerate}
+   \item (3pt) Show that EFX always exists for identical valuations.
+   \item (2pt) Show that EFX always exists when n = 2. (Hint: you can use the first result.)
+\end{enumerate}
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

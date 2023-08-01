@@ -1,0 +1,20 @@
+
+
+```tex
+
+\paragraph{Problem 1:} 
+Show that PPAD \(\subseteq\) PPP. In other words, given the circuits P and N for an instance of the PPAD problem, construct a new circuit C, such that:
+
+\begin{enumerate}[a.]
+    \item If \(\exists \)x with C(x) = \(0^n\), then \(0^n\) was not unbalanced in the original PPAD instance.
+    \item Given \(x \neq y\), with C(x) = C(y), we can find in polynomial time a \(z \neq 0^n\) (hint: possibly equal to x or y) that is unbalanced in the original PPAD instance.
+\end{enumerate}
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

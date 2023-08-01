@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{lipsum}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{listings}
+
+% 设置代码块样式
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{mygray},
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{green},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    numbers=left,
+    numbersep=5pt,
+    frame=single,
+    framexleftmargin=5mm,
+    xleftmargin=5mm,
+    language=Python, % 设置代码块的语言（可以根据需要更改）
+}
+
+\definecolor{mygray}{RGB}{240,240,240}
+
+\renewenvironment{quote}{%
+  \def\FrameCommand{{\color{mygray}\vrule width 3pt}\hspace{10pt}}%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+{\endMakeFramed}
+
+\geometry{a4paper,scale=0.70}
+
+\begin{document}
+
+\section{Introduction}
+
+这个文档的建立是基于使用chatgpt来对自己的算法博弈论的一些基本知识进行进一步的巩固（顺便也可以从这里直接复制写好的漂亮公式过去直接使用而不用自己手写那么麻烦）。同时这里也记录了自己在实际写作业的时候参考的chatGPT时提问的prompts,下面的基本概念的提问方式全部是以下模式：tell me what is xxx in latex，只有在作业一问题三实在不会的时候才全部把问题拿去问了。
+
+
+\section{Nash Equilibrium}
+
+\subsection{Definition(English)}
+
+\textbf{Nash Equilibrium:} In game theory, a Nash Equilibrium is a set of strategies, one for each player, where no player has an incentive to unilaterally change their strategy, given the strategies of the other players. Formally, let \(S_i\) be the set of strategies available to player \(i\) and \(s_i^*\) be the strategy of player \(i\) in the Nash Equilibrium. Then, for every other strategy \(s_i \in S_i\), the following condition holds:
+
+\[ u_i(s_i^*, s_{-i}) \geq u_i(s_i, s_{-i}) \]
+
+where \(u_i\) is the utility or payoff function of player \(i\), \(s_{-i}\) represents the strategies of all players other than \(i\), and \(s_i^*\) is the strategy of player \(i\) in the Nash Equilibrium.
+
+\subsection{Definition(Chinese)}
+
+\textbf{Nash 均衡：} 在博弈论中，Nash 均衡是一组策略，对于每个参与者，都不存在单方面改变策略的动机，考虑到其他参与者的策略。形式上，设 \(S_i\) 是玩家 \(i\) 可选的策略集合，\(s_i^*\) 表示在 Nash 均衡中玩家 \(i\) 的策略。那么，对于任何其他策略 \(s_i \in S_i\)，满足以下条件：
+
+\[ u_i(s_i^*, s_{-i}) \geq u_i(s_i, s_{-i}) \]
+
+其中 \(u_i\) 是玩家 \(i\) 的效用函数或收益函数，\(s_{-i}\) 表示除了玩家 \(i\) 之外所有玩家的策略，\(s_i^*\) 是 Nash 均衡中玩家 \(i\) 的策略。
+
+\textbf{Two-player Nash 均衡：} 在两人博弈中，Nash 均衡是一组策略组合 \((s_1^*, s_2^*)\)，对于每个玩家，都不存在单方面改变策略的动机，考虑到对方玩家的策略。形式上，设 \(S_1\) 和 \(S_2\) 分别是玩家 1 和玩家 2 可选的策略集合，\(s_1^*\) 和 \(s_2^*\) 分别表示在 Nash 均衡中玩家 1 和玩家 2 的策略。那么，对于任何其他策略组合 \((s_1, s_2) \in S_1 \times S_2\)，满足以下条件：
+
+\[
+    u_1(s_1^*, s_2^*) \geq u_1(s_1, s_2^*) \quad \text{且} \quad u_2(s_1^*, s_2^*) \geq u_2(s_1^*, s_2)
+\]
+
+其中 \(u_1\) 和 \(u_2\) 分别是玩家 1 和玩家 2 的效用函数或收益函数。
+
+\section{Sperner's Lemma}
+
+\textbf{Sperner's Lemma:} 设 \(T\) 是一个具有 \(n\) 维顶点的单纯形（simplex），即 \(T\) 是 \(n+1\) 个顶点的凸包。如果在 \(T\) 的顶点上着色，使得每个面上的顶点着不同的颜色，那么至少有一维子单纯形的顶点着了三种不同的颜色。
+
+换句话说，对于一个 \(n\) 维单纯形，如果将它的顶点着色，使得相邻的 \(n\) 维子单纯形的顶点颜色都不相同，那么至少有一个 \(n\) 维子单纯形的顶点着了三种不同的颜色。
+
+\section{PPAD}
+
+\textbf{PPAD (Polynomial Parity Arguments on Directed graphs):} PPAD 是一个复杂性类，它包含了一类图论问题，其中涉及在有向图上进行多项式奇偶性论证。这些问题的一个共同特征是，给定有向图的描述，需要找到一个特定节点的出边与入边的奇偶性关系。
+
+典型的 PPAD 问题包括寻找有向图中的 Brouwer 固定点（Brouwer Fixed Point Problem）和 Nash 均衡（Nash Equilibrium）。这些问题都被证明是计算复杂的，属于计算复杂性理论中的困难问题。
+
+PPAD 类被认为是计算复杂性的重要类别，其与 P、NP 和其他复杂性类之间的关系仍然是开放问题。
+
+
+\section{PPP}
+
+\textbf{PPP (Polynomial Pigeonhole Principle):} PPP 是一个复杂性类，涉及到多项式时间内判定在一组元素中是否存在“抽屉原理”所描述的“鸽笼原理”的情况。在这个情况下，有限数量的元素（鸽子）分布在更多的抽屉（抽屉数大于元素数）中，那么至少会有一个抽屉包含多于一个元素。
+
+具体来说，在 PPP 类中，给定一个多项式大小的集合，以及一个多项式大小的“抽屉数”，问题是要判定是否存在一种分配使得至少有两个元素被映射到同一个“抽屉”。
+
+PPP 类包含了一系列与组合数学中“鸽笼原理”类似的问题，它在计算复杂性理论中具有重要的地位。
+
+与许多复杂性类一样，PPP 类的性质和与其他类的关系也是活跃研究的方向。
+
+
+\section{Homework 1 Problem 3 Prompts}
+
+下面的提问prompts其实是自己手敲了一遍整个问题的tex格式，然后拿去问chatgpt，最后得到回答结合自己的理解写在了最终作业中。
+
+
+
+\begin{lstlisting}[style=mystyle, caption=Homework 1 Problem 3 Prompts, label=lst:python]
+
+  ```tex
+
+  Show that there exists a polynomial q, such that for any polymatrix game \(\mathcal{GG}\) with payoffs that can be represented exactly using c bits, we can turn a \(2^{-q(|\mathcal{GG}|c)}\)
+  -approximate Nash equilibrium into an exact Nash equilibrium. We'll break down the proof into a few steps.
+  
+  \begin{enumerate}[(a)]
+      \item Consider only a two player game between A and B. If an oracle gave you two subsets of strategies, $S_A$ and $S_B$, and promised you that there was an exact Nash equilibrium where every strategy in $S_A$ was a best response for A, every strategy in $S_B$ was a best response for B, and neither player played any strategy outside of $S_A$ or $S_B$, could you find it? hint: \textit{Write a linear program}
+      \item Extend this result to polymatrix games. IE: If an oracle gave you a subset of strategies for every player, $S_p$, and promised you that there was an exact Nash where every strategy in $S_p$ was a best response for player p, and no player played any strategy outside of $S_p$, could you find it?
+      \item Modify your result to solve the following problem instead: Given a subset of strategies, $S_p$, for every player in $\mathcal{GG}$, find the smallest $\epsilon$ such that there exists an $\epsilon$-approximate Nash where every strategy in $S_p$ is a best response for player p, and no player uses any strategy outside $S_p$.
+      \item The bit complexity of a LP is the largest number of bits needed for computation to find the minimizing feasible point (the bit complexity of a LP is polynomial in the number of constraints and number of bits per constant in the LP). Observe that the bit complexity of the LP you wrote is polynomial in |$\mathcal{GG}$| and c, \textbf{regardless of the subsets $S_p$ given as input}.
+      \item  Denote by x an upper bound on the bit complexity of the LP you wrote, for any subsets $S_p$. Say that you have a $2^{-y}$-approximate Nash equilibrium, with y > x. What is an obvious choice of $S_p$ that would give your LP a value of at most $2^{-y}$? Observe that this same LP must in fact have value 0, and therefore solving it will yield an exact Nash equilibrium.
+      
+      
+  \end{enumerate}
+  
+  ```
+  
+  please solve the problem above in latex:
+  
+  ```tex
+  <answer>
+  ```
+
+\end{lstlisting}
+
+
+
+
+
+\end{document}

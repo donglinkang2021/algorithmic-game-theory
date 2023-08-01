@@ -1,0 +1,14 @@
+
+
+```tex
+
+Pick your favorite result in our class and state your reason.
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

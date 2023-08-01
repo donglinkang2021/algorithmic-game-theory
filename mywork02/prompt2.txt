@@ -1,0 +1,32 @@
+
+
+```tex
+
+\paragraph{Problem 2.} (4pt per question) Given a set function v : $2^M \rightarrow \mathbb{R}_{\ge 0}$, and for any subsets $S, T \subseteq M$ we have that
+\[
+   v(S) + v(T) \ge v(S \cap T) + v(S \cup T)  .
+\]
+For simplicity, we abuse notations $S \cup {j}$ as $S + j$ and $S~ \backslash~\{j\}$ as $S - j$, for any $j \in M$.
+
+\begin{enumerate}
+   \item Prove that for any $S \subseteq T \subseteq M$, we have 
+   
+\[
+  \frac{v(T+j)}{v(T)} \le \frac{v(S+j)}{v(S)}. 
+\]
+   \item Prove that for any $T \subseteq M$ we have
+   
+\[
+   v(T) \ge \sum_{k \in T} [v(T) - v(T-k)].
+\]
+
+\textit{Notes: the set function is default to be monotone and $v(\emptyset) = 0$ (Our Lecturer has mentioned this in the Dingding Group).}
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

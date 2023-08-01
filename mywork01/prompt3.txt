@@ -1,0 +1,25 @@
+
+
+```tex
+
+Show that there exists a polynomial q, such that for any polymatrix game \(\mathcal{GG}\) with payoffs that can be represented exactly using c bits, we can turn a \(2^{-q(|\mathcal{GG}|c)}\)
+-approximate Nash equilibrium into an exact Nash equilibrium. We'll break down the proof into a few steps.
+
+\begin{enumerate}[(a)]
+    \item Consider only a two player game between A and B. If an oracle gave you two subsets of strategies, $S_A$ and $S_B$, and promised you that there was an exact Nash equilibrium where every strategy in $S_A$ was a best response for A, every strategy in $S_B$ was a best response for B, and neither player played any strategy outside of $S_A$ or $S_B$, could you find it? hint: \textit{Write a linear program}
+    \item Extend this result to polymatrix games. IE: If an oracle gave you a subset of strategies for every player, $S_p$, and promised you that there was an exact Nash where every strategy in $S_p$ was a best response for player p, and no player played any strategy outside of $S_p$, could you find it?
+    \item Modify your result to solve the following problem instead: Given a subset of strategies, $S_p$, for every player in $\mathcal{GG}$, find the smallest $\epsilon$ such that there exists an $\epsilon$-approximate Nash where every strategy in $S_p$ is a best response for player p, and no player uses any strategy outside $S_p$.
+    \item The bit complexity of a LP is the largest number of bits needed for computation to find the minimizing feasible point (the bit complexity of a LP is polynomial in the number of constraints and number of bits per constant in the LP). Observe that the bit complexity of the LP you wrote is polynomial in |$\mathcal{GG}$| and c, \textbf{regardless of the subsets $S_p$ given as input}.
+    \item  Denote by x an upper bound on the bit complexity of the LP you wrote, for any subsets $S_p$. Say that you have a $2^{-y}$-approximate Nash equilibrium, with y > x. What is an obvious choice of $S_p$ that would give your LP a value of at most $2^{-y}$? Observe that this same LP must in fact have value 0, and therefore solving it will yield an exact Nash equilibrium.
+    
+    
+\end{enumerate}
+
+```
+
+please solve the problem above in latex:
+
+```tex
+<answer>
+```
+

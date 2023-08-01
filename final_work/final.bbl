@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:journals/corr/abs-1902-04319}
+Ioannis Caragiannis, Nick Gravin, and Xin Huang.
+\newblock Envy-freeness up to any item with high nash welfare: The virtue of
+  donating items.
+\newblock {\em CoRR}, abs/1902.04319, 2019.
+
+\bibitem{10.1145/3355902}
+Ioannis Caragiannis, David Kurokawa, Herv\'{e} Moulin, Ariel~D. Procaccia,
+  Nisarg Shah, and Junxing Wang.
+\newblock The unreasonable fairness of maximum nash welfare.
+\newblock {\em ACM Trans. Econ. Comput.}, 7(3), sep 2019.
+
+\bibitem{doi:10.1137/20M1359134}
+Bhaskar~Ray Chaudhury, Telikepalli Kavitha, Kurt Mehlhorn, and Alkmini
+  Sgouritsa.
+\newblock A little charity guarantees almost envy-freeness.
+\newblock {\em SIAM Journal on Computing}, 50(4):1336--1358, 2021.
+
+\bibitem{chaudhury2020little}
+Bhaskar~Ray Chaudhury, Tellikepalli Kavitha, Kurt Mehlhorn, and Alkmini
+  Sgouritsa.
+\newblock A little charity guarantees almost envy-freeness, 2020.
+
+\bibitem{10.1145/988772.988792}
+R.~J. Lipton, E.~Markakis, E.~Mossel, and A.~Saberi.
+\newblock On approximately fair allocations of indivisible goods.
+\newblock In {\em Proceedings of the 5th ACM Conference on Electronic
+  Commerce}, EC '04, page 125–131, New York, NY, USA, 2004. Association for
+  Computing Machinery.
+
+\bibitem{DBLP:journals/corr/PlautR17}
+Benjamin Plaut and Tim Roughgarden.
+\newblock Almost envy-freeness with general valuations.
+\newblock {\em CoRR}, abs/1707.04769, 2017.
+
+\end{thebibliography}

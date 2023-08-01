@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document}
+
+We now give an overview of the main ideas used to find our EFX allocation. We first recall the algorithm of Lipton et al. [25] for finding an EF1 allocation. They use the notion of an envy-graph: here each vertex corresponds to an agent and there is an edge $(i, j)$ iff $i$ envies $j$. The invariant maintained is that the envy-graph is a DAG: a cycle corresponds to a cycle of envy, and by swapping bundles along a cycle, every agent becomes better-off, and the number of envy edges does not increase. More precisely, if $i_0 \rightarrow i_1 \rightarrow i_2 \rightarrow \ldots \rightarrow i_{l-1} \rightarrow i_0$ is a cycle in the envy graph, then reassigning $X_{i,j+1}$ to agent $i_j$ for $0 \leq j < l $ (indices are to be read modulo $l$) will increase the valuation of every agent in the cycle. Also, if there was an edge from $s$ to some $i_k$ where $s$ is not a part of the cycle, this edge just gets directed now from $s$ to $i_{k+1}$ after we exchange bundles along the cycle. Thus, the number of envy edges in the graph does not increase, and the valuations of the agents in the cycle go up. Thus cycles can be eliminated. The algorithm in [25] runs in rounds and always maintains an allocation that is also EF1. At the beginning of every round, an unenvied agent $s$ (this is a source vertex in this DAG) is identified, and an unallocated good $g$ is allocated to $s$. The new allocation is also EF1, as nobody will envy the bundle of $s$ after removing the good $g$.
+
+\end{document}

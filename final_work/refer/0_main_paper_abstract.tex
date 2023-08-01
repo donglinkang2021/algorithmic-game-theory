@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+Fair division of indivisible goods is a very well-studied problem. The goal of this problem is to distribute $m$ goods to $n$ agents in a “fair” manner, where every agent has a valuation for each subset of goods. We assume general valuations.
+
+Envy-freeness is the most extensively studied notion of fairness. However, envy-free allocations do not always exist when goods are indivisible. The notion of fairness we consider here is “envy-freeness up to any good” (EFX) where no agent envies another agent after the removal of any single good from the other agent’s bundle. It is not known if such an allocation always exists.
+
+We show there is always a partition of the set of goods into $n + 1$ subsets $(X_1, \ldots, X_n, P)$ where for $i \in [n]$, $X_i$ is the bundle allocated to agent $i$, and the set $P$ is unallocated (or donated to charity) such that we have:
+\begin{itemize}
+    \item Envy-freeness up to any good,
+    \item No agent values $P$ higher than her own bundle, and
+    \item Fewer than $n$ goods go to charity, i.e., $|P| < n$ (typically $m \geq n$).
+\end{itemize}
+
+Our proof is constructive and leads to a pseudo-polynomial time algorithm to find such an allocation. When agents have additive valuations and $|P|$ is large (i.e., when $|P|$ is close to $n$), our allocation also has a good maximin share (MMS) guarantee. Moreover, a minor variant of our algorithm also shows the existence of an allocation that is $\frac{4}{7}$ groupwise maximin share (GMMS): this is a notion of fairness stronger than MMS. This improves upon the current best bound of $\frac{1}{2}$ known for an approximate GMMS allocation.
+
+This version of the paper goes beyond the preliminary version published in SODA 2020~\cite{SODA2020} in two key points:
+\begin{enumerate}
+    \item The pseudo-polynomial algorithm works when agents have general valuation functions (not just gross-substitute valuations).
+    \item We introduce a relaxed definition of “most envious agent”.
+\end{enumerate}
+
+\end{document}
